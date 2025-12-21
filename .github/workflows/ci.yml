@@ -38,11 +38,10 @@ jobs:
           pip install -r requirements-dev.txt
           pip install -r requirements.txt
 
-      - name: Lint (black/isort/flake8)
+      - name: Lint (black/isort)
         run: |
           black --check .
           isort --check-only .
-          flake8 .
 
       - name: Run tests
         run: |

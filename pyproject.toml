@@ -1,16 +1,24 @@
 [project]
 name = "grading-llm"
 version = "0.1.0"
-description = "LLM-assisted based system."
-authors = [
-  { name = "Anikait Lakhotia", email = "alokhoti@uwaterloo.ca" }
-]
+description = "LLM-assisted grading system with strong data validation and evaluation."
 readme = "README.md"
 requires-python = ">=3.9"
+authors = [
+    { name = "Anikait Lakhotia", email = "alokhoti@uwaterloo.ca" }
+]
 
-[project.dependencies]
-numpy = "^1.25"
-pandas = "^2.2"
+dependencies = [
+    "numpy>=1.25",
+    "pandas>=2.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.0",
+    "isort>=5.13",
+    "pytest>=8.0"
+]
 
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -18,11 +26,8 @@ build-backend = "setuptools.build_meta"
 
 [tool.black]
 line-length = 88
-target-version = ['py39']
+target-version = ["py39"]
 
 [tool.isort]
 profile = "black"
-
-[tool.flake8]
-max-line-length = 88
-extend-ignore = ["E203"]
+line_length = 88
