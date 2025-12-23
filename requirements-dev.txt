@@ -1,6 +1,19 @@
+# Runtime deps
+numpy>=1.25
+pandas>=2.0
+scikit-learn>=1.4
+pyarrow>=15.0
+
+# Formatting & linting
 black==24.3.0
 isort==5.12.0
 flake8==6.1.0
+
+# Testing
 pytest==8.3.0
+
+# Typing
 mypy==1.8.0
+
+# Git hooks
 pre-commit==4.4.0
