@@ -1,0 +1,18 @@
+# infra/docker-compose.yml
+version: "3.8"
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile
+    image: grading-llm-api:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=local
+      - USE_MOCK_LLM=1
+      - LOG_JSON=1
+      - MAX_FULL_TEXT_CHARS=20000
+    volumes:
+      - ../.env:/app/.env:ro
+    restart: unless-stopped

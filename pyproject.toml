@@ -5,23 +5,36 @@ description = "LLM-assisted grading system with strong data validation and evalu
 readme = "README.md"
 requires-python = ">=3.9"
 authors = [
-    { name = "Anikait Lakhotia", email = "alokhoti@uwaterloo.ca" }
+  { name = "Anikait Lakhotia", email = "alokhoti@uwaterloo.ca" }
 ]
 
+# Runtime dependencies - keep lightweight here; use requirements files for convenience
 dependencies = [
-    "numpy>=1.25",
-    "pandas>=2.2"
+  "numpy>=1.25",
+  "pandas>=2.2",
+  "scikit-learn>=1.4",
+  "pyarrow>=15.0",
+  "fastapi>=0.95",
+  "uvicorn[standard]>=0.22",
+  "python-dotenv>=1.0",
 ]
 
 [project.optional-dependencies]
 dev = [
-    "black>=24.0",
-    "isort>=5.13",
-    "pytest>=8.0"
+  "black==24.3.0",
+  "isort==5.12.0",
+  "pytest==8.3.0",
+  "httpx==0.24.0",
+  "mypy==1.8.0",
+  "nbstripout>=0.5.0",
+  "pre-commit==4.4.0",
+  "jupyterlab>=4.0",
+  "nbconvert>=7.0",
+  "python-dotenv>=1.0",
 ]
 
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.black]
