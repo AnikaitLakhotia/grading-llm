@@ -1,0 +1,2 @@
+essay_id,assignment,prompt_name,grade_level,original_score,model_score,model_confidence,final_score,user_id,notes,timestamp_utc
+e100015,argue_x,prompt_oppose,10,6,,0.0,1,grader_local,,2025-12-27T23:09:23.934173
