@@ -1,0 +1,25 @@
+# configs/default.yaml
+# Default training config (yaml). The training script accepts --config to load this.
+data:
+  input: "data/processed.sample.parquet"   # path to processed data (parquet/csv). Override on CLI.
+  text_column: "full_text"
+  label_column: "final_score"              # columns: final_score if label-store used; fallback to score
+  test_size: 0.2
+  random_seed: 42
+
+training:
+  backend: "sklearn"        # options: "sklearn" (fast), "pytorch" (if implemented)
+  model_type: "logistic"    # options: logistic, mlp
+  max_iter: 1000
+  random_state: 42
+
+features:
+  type: "tfidf"             # currently supports tfidf
+  max_features: 5000
+  ngram_range: [1, 2]
+
+output:
+  out_dir: "models"
+  prefix: "train"
+  save_vectorizer: true
+  save_model: true

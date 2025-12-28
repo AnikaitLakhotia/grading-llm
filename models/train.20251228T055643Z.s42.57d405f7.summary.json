@@ -1,0 +1,10 @@
+{
+  "model_path": "models/train.20251228T055643Z.s42.57d405f7.model.joblib",
+  "vectorizer_path": "models/train.20251228T055643Z.s42.57d405f7.tfidf.joblib",
+  "qwk": 0.8606271777003485,
+  "within1": 0.875,
+  "n_train": 160,
+  "n_test": 40,
+  "seed": 42,
+  "timestamp": "2025-12-28T05:56:43.989838+00:00"
+}
