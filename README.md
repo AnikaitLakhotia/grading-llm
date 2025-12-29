@@ -57,7 +57,6 @@ uvicorn src.api.main:app --reload --host 127.0.0.1 --port 8000
 # formatting & lint
 black --check .
 isort --check-only .
-flake8 .
 
 # unit tests
 pytest -q
@@ -74,10 +73,10 @@ curl -sS -X POST http://localhost:8000/grade -H "Content-Type: application/json"
 
 ## Useful scripts
 
-- `scripts/generate_synthetic_dataset.py` — create a safe synthetic dataset (seeded).
-- `scripts/run_preprocess.sh` / `src.preprocess.cli` — run the preprocessing pipeline (anonymize, normalize, feature extraction).
-- `scripts/run_baseline_eval.py` — headless baseline evaluation (TF-IDF baseline + MockLLM).
-- `scripts/run_prettify.sh` (optional) — run black/isort on the repo (create if desired).
+- `scripts/generate_synthetic_dataset.py` - create a safe synthetic dataset (seeded).
+- `scripts/run_preprocess.sh` / `src.preprocess.cli` - run the preprocessing pipeline (anonymize, normalize, feature extraction).
+- `scripts/run_baseline_eval.py` - headless baseline evaluation (TF-IDF baseline + MockLLM).
+- `scripts/run_prettify.sh` (optional) - run black/isort on the repo (create if desired).
 
 ---
 
@@ -113,7 +112,7 @@ grading-llm/
 
 ---
 
-## Notes for reviewers / interviewers
+## Notes
 
 - Key evaluation metrics: **Quadratic Weighted Kappa (QWK)** and **±1 accuracy** (appropriate for ordinal labels 1..6).
 - The repo demonstrates:
@@ -136,4 +135,4 @@ grading-llm/
 
 This project is MIT licensed.
 
-Contact: Anikait Lakhotia <alokhoti@uwaterloo.ca>
+Contact: Anikait Lakhotia <anikhoti@uwaterloo.ca>
